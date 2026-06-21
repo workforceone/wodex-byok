@@ -21,6 +21,22 @@ skips the ChatGPT login wall, and keeps itself working across Codex updates.
 - **Memory inspector** — see what Codex remembers locally
 - **Pre-configured** — Playwright MCP, project trust, sensible defaults
 
+## Privacy — zero telemetry
+
+**The OSS edition phones home to nothing.** No analytics, no tracking, no crash
+reporting, no usage beacons, no auto "check-in". This is a hard requirement, not a
+default you can toggle — there is simply no telemetry code.
+
+The only network traffic wodex (OSS) makes is:
+
+- **to *your* configured provider** (BYOK) — the model calls you initiate;
+- **on your LAN**, to your own phone, for the phone-remote bridge.
+
+Nothing leaves your machine to us. See **[PRIVACY.md](./PRIVACY.md)**.
+
+> Community plugin ranking on wodex.ai is computed **only** from opted-in *account*
+> users — never from OSS installs (by construction we have no data from them).
+
 ## Open-core
 
 | | OSS (this repo) | wodex.ai (account) |
